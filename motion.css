@@ -1,0 +1,61 @@
+.pathways-motion{overflow:hidden;background:linear-gradient(180deg,var(--paper),#eeece4);padding:78px 0 58px}.pathways-intro{display:flex;flex-direction:column;align-items:end;gap:13px}.pathways-intro p{margin:0;font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}.pathways-intro>span{display:flex;gap:20px;font-size:10px;color:var(--gold)}.pathways-carousel{overflow:visible;isolation:isolate;padding:12px 0 35px;touch-action:pan-y}.pathways-carousel:not(.is-ready) .swiper-wrapper{height:auto}.pathways-carousel.is-ready .pathways-grid{display:flex;gap:0;align-items:stretch}.pathways-carousel .swiper-slide{height:auto;min-width:0}.pathways-carousel.is-ready .swiper-slide{opacity:.55;transition:opacity .65s}.pathways-carousel.is-ready .swiper-slide-active{opacity:1}.pathways-carousel .pathway-card{height:100%;box-sizing:border-box;border-color:#d2d7cb;box-shadow:0 10px 35px #20362f09}.pathways-carousel.is-ready .swiper-slide-active .pathway-card{box-shadow:0 22px 44px #20362f16}.pathways-carousel .pathway-card:hover{transform:none}.pathways-carousel .pathway-image{aspect-ratio:1.95}.pathways-carousel .pathway-copy{min-height:128px;padding:27px 30px}.pathways-carousel .pathway-copy h3{font-size:clamp(24px,2.1vw,34px);line-height:1.22;max-width:460px}.pathways-carousel .pathway-label{font-size:9px}.pathways-carousel .pathway-arrow{width:40px;height:40px}.pathways-carousel .pathway-number{font-size:9px;left:22px;bottom:20px;padding:10px 13px}.pathways-controls{display:none;align-items:center;gap:30px;border-top:1px solid var(--line);padding-top:27px;margin-top:10px}.pathways-motion.is-ready .pathways-controls{display:flex}.pathways-pagination{display:flex;gap:15px;flex:none;width:auto!important}.pathways-pagination .swiper-pagination-bullet{appearance:none;margin:0!important;width:auto;height:auto;background:transparent;border:0;opacity:1;border-radius:0;color:var(--muted);font:11px var(--font-site);cursor:pointer;padding:10px 3px;position:relative}.pathways-pagination .swiper-pagination-bullet:after{content:"";position:absolute;left:0;right:0;bottom:3px;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .3s}.pathways-pagination .swiper-pagination-bullet-active{color:var(--gold)}.pathways-pagination .swiper-pagination-bullet-active:after{transform:scaleX(1)}.pathways-progress{height:2px;background:var(--line);flex:1;overflow:hidden;margin:0 25px}.pathways-progress>span{display:block;width:100%;height:100%;background:var(--gold);transform-origin:left;transform:scaleX(.333333);transition:transform .65s cubic-bezier(.2,.7,.3,1)}.pathways-navigation{display:flex;gap:10px;align-items:center;flex:none}.pathways-navigation button{width:43px;height:43px;border:1px solid var(--line);border-radius:50%;color:var(--ink);background:transparent;cursor:pointer;display:grid;place-items:center;font:18px var(--font-site);transition:background .25s,color .25s}.pathways-navigation button:hover{background:var(--navy);border-color:var(--navy);color:var(--paper)}.pathways-navigation [data-pathways-pause]{font-size:12px}.pathways-count{font-size:10px;letter-spacing:.1em;color:var(--muted);margin-right:14px}.pathways-carousel.swiper-grab-cursor{cursor:grab}.pathways-carousel .swiper-slide a{-webkit-user-drag:none}.pathways-carousel .swiper-slide img{user-select:none;-webkit-user-drag:none}
+@media(max-width:900px){.pathways-motion{padding:60px 0 45px}.pathways-carousel .pathway-copy{padding:24px;min-height:120px}.pathways-carousel .pathway-copy h3{font-size:27px}.pathways-controls{gap:20px}.pathways-progress{margin:0 10px}.pathways-count{margin-right:7px}.pathways-intro p{display:none}}
+@media(max-width:600px){.pathways-motion{padding:48px 0 36px}.pathways-heading{align-items:start;gap:14px}.pathways-heading h2{font-size:34px}.pathways-intro{align-self:end;padding-bottom:4px}.pathways-intro>span{font-size:8px;gap:7px;white-space:nowrap}.pathways-carousel{padding-top:5px;padding-bottom:22px}.pathways-carousel .pathway-image{aspect-ratio:1.35}.pathways-carousel .pathway-copy{padding:22px;min-height:138px}.pathways-carousel .pathway-copy h3{font-size:25px}.pathways-carousel .pathway-number{font-size:8px;left:15px;bottom:15px;padding:9px 11px}.pathways-carousel .pathway-label{font-size:8px}.pathways-carousel .pathway-arrow{width:34px;height:34px}.pathways-controls{padding-top:20px;gap:14px}.pathways-pagination{gap:12px}.pathways-pagination .swiper-pagination-bullet{font-size:10px}.pathways-progress{display:none}.pathways-navigation{margin-left:auto;gap:7px}.pathways-navigation button{width:34px;height:34px;font-size:16px}.pathways-count{font-size:8px;margin-right:4px}.pathways-navigation [data-pathways-pause]{font-size:10px}}
+@media(max-width:360px){.pathways-intro{display:none}.pathways-count{display:none}}
+@media(prefers-reduced-motion:reduce){.pathways-carousel *,.pathways-progress>span{transition:none!important}.pathways-carousel .pathway-card:hover img{transform:none}}
+@media print{.pathways-carousel .pathways-grid{display:grid!important;grid-template-columns:repeat(3,1fr);transform:none!important}.pathways-carousel .swiper-slide{transform:none!important;width:auto!important;opacity:1!important}.pathways-controls,.pathways-intro{display:none!important}}
+/* A fully contained feature slider: one complete card, no clipped neighbours. */
+.site-header{background:var(--paper)}
+.pathways-motion{background:var(--paper);padding:72px 0 55px}
+.pathways-heading{margin-bottom:32px}
+.pathways-carousel{overflow:hidden;padding:0;isolation:isolate;border-radius:3px;max-width:100%;width:100%;margin:0}
+.pathways-carousel.is-ready .pathways-grid{gap:0;align-items:stretch}
+.pathways-carousel.is-ready .swiper-slide,.pathways-carousel.is-ready .swiper-slide-active{opacity:1;transition:none}
+.pathways-carousel .swiper-slide{height:auto;box-sizing:border-box;flex-shrink:0}
+.pathways-carousel .pathway-card{display:grid;grid-template-columns:1.13fr 1fr;height:370px;border:1px solid var(--line);background:var(--white);box-shadow:none;overflow:hidden}
+.pathways-carousel.is-ready .swiper-slide-active .pathway-card{box-shadow:none}
+.pathways-carousel .pathway-image{aspect-ratio:auto;height:100%;min-height:0;overflow:hidden}
+.pathways-carousel .pathway-image img{width:100%;height:100%;object-fit:cover}
+.pathways-carousel .pathway-copy{min-height:0;min-width:0;padding:42px;display:flex;align-items:center;gap:24px}
+.pathways-carousel .pathway-label{font-size:10px;letter-spacing:.12em;margin-bottom:20px}
+.pathways-carousel .pathway-copy h3{font-size:clamp(28px,3vw,43px);line-height:1.16;max-width:420px;overflow-wrap:break-word}
+.pathways-carousel .pathway-arrow{width:48px;height:48px;margin:0;align-self:flex-end;font-size:24px}
+.pathways-carousel .pathway-number{left:24px;bottom:24px;font-size:9px;padding:10px 13px}
+.pathways-controls{padding-top:22px;margin-top:24px}
+.pathways-progress{margin:0 25px}
+.pathways-carousel:not(.is-ready) .pathways-grid{display:block;transform:none}
+.pathways-carousel:not(.is-ready) .swiper-slide{margin-bottom:20px}
+@media(max-width:900px){
+ .pathways-motion{padding:58px 0 44px}
+ .pathways-carousel .pathway-card{height:320px;grid-template-columns:1fr 1fr}
+ .pathways-carousel .pathway-copy{padding:28px;gap:14px}
+ .pathways-carousel .pathway-copy h3{font-size:29px}
+ .pathways-carousel .pathway-arrow{width:36px;height:36px;font-size:21px}
+ .pathways-carousel .pathway-label{font-size:9px;margin-bottom:15px}
+}
+@media(max-width:600px){
+ .pathways-motion{padding:45px 0 35px}
+ .pathways-heading{margin-bottom:25px}
+ .pathways-heading h2{font-size:32px}
+ .pathways-intro{display:none}
+ .pathways-carousel .pathway-card{display:flex;flex-direction:column;height:405px}
+ .pathways-carousel .pathway-image{height:230px;flex:0 0 230px;aspect-ratio:auto;width:100%}
+ .pathways-carousel .pathway-copy{height:175px;min-height:175px;padding:25px;flex:1;align-items:center}
+ .pathways-carousel .pathway-copy h3{font-size:27px;line-height:1.2;max-width:100%}
+ .pathways-carousel .pathway-label{font-size:8px;margin-bottom:12px}
+ .pathways-carousel .pathway-arrow{align-self:center;width:35px;height:35px;font-size:20px}
+ .pathways-carousel .pathway-number{left:17px;bottom:17px;font-size:8px}
+ .pathways-controls{padding-top:18px;margin-top:20px}
+}
+@media(max-width:360px){.pathways-carousel .pathway-copy{padding:20px;gap:12px}.pathways-carousel .pathway-copy h3{font-size:24px}}
+/* Two complete cards per row on desktop; one on narrower screens. */
+@media(min-width:1000px){
+ .pathways-carousel .pathway-card{display:flex;flex-direction:column;height:430px}
+ .pathways-carousel .pathway-image{height:270px;flex:0 0 270px;aspect-ratio:auto;width:100%}
+ .pathways-carousel .pathway-copy{height:160px;min-height:160px;padding:27px 30px;flex:1;align-items:center}
+ .pathways-carousel .pathway-copy h3{font-size:29px;line-height:1.22;max-width:440px}
+ .pathways-carousel .pathway-arrow{align-self:center;width:40px;height:40px;font-size:22px}
+ .pathways-carousel .pathway-label{font-size:9px;margin-bottom:14px}
+}
+/* Keep the recognizable subjects in the useful part of cards and thumbnails. */
+.pathway-image img[src*="generated-"],.post .thumb img[src*="generated-"],.pod .thumb img[src*="generated-"]{object-position:78% center;filter:none}

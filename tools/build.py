@@ -45,17 +45,23 @@ LAYOUT = """<!doctype html>
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{site}/assets/img/og.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
+<meta property="og:image" content="{site}/assets/img/generated-library.jpg">
+<meta property="og:image:width" content="1536">
+<meta property="og:image:height" content="1024">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#f8f4ec">
 <link rel="icon" href="assets/img/geometry.svg" type="image/svg+xml">
-<link rel="preload" href="assets/fonts/cormorant.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/eb-garamond.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&amp;display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="assets/vendor/swiper-bundle.min.css">
 <link rel="stylesheet" href="premium.css">
+<link rel="stylesheet" href="showcase.css">
+<link rel="stylesheet" href="motion.css">
+<link rel="stylesheet" href="inner-pages.css">
+<link rel="stylesheet" href="glass.css">
 {jsonld}</head>
 <body id="top" data-page="{page_name}">
 <div class="reading-progress" aria-hidden="true"></div>
@@ -87,6 +93,11 @@ LAYOUT = """<!doctype html>
 </footer>
 <a class="float-top" href="#top" aria-label="Back to top">{arrow}</a>
 <script src="script.js"></script>
+<script src="showcase.js"></script>
+<script src="assets/vendor/gsap.min.js"></script>
+<script src="assets/vendor/ScrollTrigger.min.js"></script>
+<script src="assets/vendor/swiper-bundle.min.js"></script>
+<script src="motion.js"></script>
 </body>
 </html>
 """
@@ -133,6 +144,12 @@ JSONLD = {
 def hero_picture(m):
     """<!--hero:NAME|alt|class--> -> responsive <picture> with WebP and a mobile crop."""
     name, alt, cls = m.group(1), m.group(2), m.group(3)
+    if 'page-hero-img' in cls:
+        # Interior banners use the full composition; cropped mobile assets can
+        # otherwise cut off the top of the bust or microphone.
+        return (f'<picture class="{cls}">'
+                f'<source srcset="assets/img/{name}.webp" type="image/webp">'
+                f'<img src="assets/img/{name}.jpg" alt="{alt}" fetchpriority="high" decoding="async"></picture>')
     return (f'<picture class="{cls}">'
             f'<source media="(max-width:900px)" srcset="assets/img/{name}-m.webp" type="image/webp">'
             f'<source media="(max-width:900px)" srcset="assets/img/{name}-m.jpg">'
@@ -206,7 +223,7 @@ def build():
     print("built sitemap.xml, robots.txt")
     dist = ROOT / 'dist'
     dist.mkdir(exist_ok=True)
-    for name in [*built, '404.html', 'styles.css', 'premium.css', 'script.js', 'sitemap.xml', 'robots.txt']:
+    for name in [*built, '404.html', 'styles.css', 'premium.css', 'showcase.css', 'motion.css', 'inner-pages.css', 'glass.css', 'script.js', 'showcase.js', 'motion.js', 'sitemap.xml', 'robots.txt']:
         shutil.copy2(ROOT / name, dist / name)
     shutil.copytree(ROOT / 'assets', dist / 'assets', dirs_exist_ok=True)
     # Retain original WordPress-style routes when hosted on a static server.

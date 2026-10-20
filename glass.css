@@ -1,0 +1,26 @@
+/* Frosted glass is used on interior heroes; preserve the approved homepage slider. */
+.hero-glass-panel,.showcase-glass{position:relative;box-sizing:border-box;border:1px solid rgba(255,255,255,.22);border-top-color:rgba(255,255,255,.4);border-radius:14px;background:linear-gradient(125deg,rgba(255,255,255,.14),rgba(255,255,255,.055) 60%,rgba(255,255,255,.08));-webkit-backdrop-filter:blur(18px) saturate(125%);backdrop-filter:blur(18px) saturate(125%);box-shadow:0 20px 55px rgba(3,15,11,.18),inset 0 1px 0 rgba(255,255,255,.09);isolation:isolate}
+.hero-glass-panel:before,.showcase-glass:before{content:"";position:absolute;pointer-events:none;inset:0;border-radius:inherit;background:radial-gradient(ellipse at top left,rgba(255,255,255,.08),transparent 65%);z-index:-1}
+.page-hero .wrap,.page-hero.plain .wrap,.page-hero:not(.plain) .wrap{padding:36px 0;min-height:390px;justify-content:center}
+.hero-glass-panel{width:min(780px,68%);padding:30px 36px}
+.hero-glass-panel .page-breadcrumb{margin-bottom:20px}
+.hero-glass-panel .eyebrow{margin-bottom:13px}
+.hero-glass-panel p{max-width:100%;color:#f2f4ed}
+.hero-glass-panel h1{max-width:100%;margin-bottom:18px}
+.page-hero .hero-glass-panel>.button{margin-top:22px;display:inline-flex}
+.article-hero .hero-glass-panel,.page-hero.plain .hero-glass-panel{width:min(1040px,90%)}
+.article-hero .hero-glass-panel{padding:30px 36px}
+.showcase-glass{width:min(790px,68%);padding:30px 38px}
+.showcase-glass h1{font-size:clamp(56px,5.5vw,82px);line-height:1.02;max-width:100%;margin-bottom:24px}
+.showcase-glass h2{font-size:clamp(48px,4.7vw,68px);line-height:1.06;max-width:100%;margin-bottom:24px}
+.showcase-glass .showcase-kicker{margin-bottom:21px}
+.showcase-glass .showcase-description{color:#f3f1e7;margin-bottom:25px}
+.showcase-controls button{background:rgba(255,255,255,.085);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+body[data-page="index"] .showcase-controls button{background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
+body[data-page="index"] .showcase-controls button:hover{background:#ffffff18}
+@media(max-width:1100px){.hero-glass-panel{width:74%;padding:28px 30px}.showcase-glass{width:76%;padding:28px 32px}.showcase-glass h1{font-size:72px}.showcase-glass h2{font-size:58px}}
+@media(max-width:900px){.page-hero .wrap,.page-hero.plain .wrap,.page-hero:not(.plain) .wrap{padding:30px 0;min-height:360px}.hero-glass-panel{width:88%;padding:27px 30px}.hero-glass-panel h1{font-size:47px}.page-hero .hero-glass-panel p{max-width:100%}.showcase-glass{width:90%;padding:28px 32px}.showcase-glass h1{font-size:67px}.showcase-glass h2{font-size:54px}.article-hero .hero-glass-panel{width:100%}}
+@media(max-width:600px){.page-hero .wrap,.page-hero.plain .wrap,.page-hero:not(.plain) .wrap{padding:25px 0;min-height:330px}.hero-glass-panel,.article-hero .hero-glass-panel,.page-hero.plain .hero-glass-panel{width:100%;padding:23px;border-radius:11px}.hero-glass-panel h1,.page-hero.plain .hero-glass-panel h1{font-size:35px;line-height:1.16}.hero-glass-panel .page-breadcrumb{font-size:8px;margin-bottom:18px}.page-hero .hero-glass-panel p{font-size:13px;line-height:1.8}.hero-glass-panel .eyebrow{font-size:8px}.showcase-glass{width:100%;padding:23px;border-radius:12px}.showcase-glass h1{font-size:clamp(40px,12.5vw,56px);line-height:1.04;margin-bottom:21px}.showcase-glass h2{font-size:clamp(34px,9.7vw,48px);line-height:1.1;margin-bottom:21px}.showcase-glass .showcase-kicker{font-size:8px;gap:11px;margin-bottom:19px;letter-spacing:.1em}.showcase-glass .showcase-kicker>span{width:18px}.showcase-glass .showcase-description{font-size:8px;line-height:1.9;margin-bottom:22px}.showcase-glass .showcase-description.showcase-sentence{font-size:15px;line-height:1.7}.showcase-glass .showcase-actions{gap:17px}.showcase-glass .showcase-primary{font-size:8px;padding:14px 16px;gap:17px}.showcase-glass .showcase-secondary{font-size:8px;gap:13px}}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.hero-glass-panel,.showcase-glass{background:rgba(24,46,36,.94)}}
+@media(prefers-reduced-transparency:reduce){.hero-glass-panel,.showcase-glass{background:#20362f;backdrop-filter:none;-webkit-backdrop-filter:none}}
+@media print{.hero-glass-panel,.showcase-glass{width:100%;padding:0;border:0;background:none;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}.hero-glass-panel:before,.showcase-glass:before{display:none}.page-hero .wrap{min-height:0;padding:20px 0}.showcase-glass h1{font-size:30pt}}
