@@ -62,6 +62,7 @@ LAYOUT = """<!doctype html>
 <link rel="stylesheet" href="motion.css">
 <link rel="stylesheet" href="inner-pages.css">
 <link rel="stylesheet" href="glass.css">
+<link rel="stylesheet" href="original-home.css">
 {jsonld}</head>
 <body id="top" data-page="{page_name}">
 <div class="reading-progress" aria-hidden="true"></div>
@@ -223,7 +224,7 @@ def build():
     print("built sitemap.xml, robots.txt")
     dist = ROOT / 'dist'
     dist.mkdir(exist_ok=True)
-    for name in [*built, '404.html', 'styles.css', 'premium.css', 'showcase.css', 'motion.css', 'inner-pages.css', 'glass.css', 'script.js', 'showcase.js', 'motion.js', 'sitemap.xml', 'robots.txt']:
+    for name in [*built, '404.html', 'styles.css', 'premium.css', 'showcase.css', 'motion.css', 'inner-pages.css', 'glass.css', 'original-home.css', 'script.js', 'showcase.js', 'motion.js', 'sitemap.xml', 'robots.txt']:
         shutil.copy2(ROOT / name, dist / name)
     shutil.copytree(ROOT / 'assets', dist / 'assets', dirs_exist_ok=True)
     # Retain original WordPress-style routes when hosted on a static server.
