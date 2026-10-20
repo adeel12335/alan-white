@@ -1,26 +1,44 @@
-/* Frosted glass is used on interior heroes; preserve the approved homepage slider. */
-.hero-glass-panel,.showcase-glass{position:relative;box-sizing:border-box;border:1px solid rgba(255,255,255,.22);border-top-color:rgba(255,255,255,.4);border-radius:14px;background:linear-gradient(125deg,rgba(255,255,255,.14),rgba(255,255,255,.055) 60%,rgba(255,255,255,.08));-webkit-backdrop-filter:blur(18px) saturate(125%);backdrop-filter:blur(18px) saturate(125%);box-shadow:0 20px 55px rgba(3,15,11,.18),inset 0 1px 0 rgba(255,255,255,.09);isolation:isolate}
-.hero-glass-panel:before,.showcase-glass:before{content:"";position:absolute;pointer-events:none;inset:0;border-radius:inherit;background:radial-gradient(ellipse at top left,rgba(255,255,255,.08),transparent 65%);z-index:-1}
-.page-hero .wrap,.page-hero.plain .wrap,.page-hero:not(.plain) .wrap{padding:36px 0;min-height:390px;justify-content:center}
-.hero-glass-panel{width:min(780px,68%);padding:30px 36px}
-.hero-glass-panel .page-breadcrumb{margin-bottom:20px}
-.hero-glass-panel .eyebrow{margin-bottom:13px}
-.hero-glass-panel p{max-width:100%;color:#f2f4ed}
-.hero-glass-panel h1{max-width:100%;margin-bottom:18px}
-.page-hero .hero-glass-panel>.button{margin-top:22px;display:inline-flex}
-.article-hero .hero-glass-panel,.page-hero.plain .hero-glass-panel{width:min(1040px,90%)}
-.article-hero .hero-glass-panel{padding:30px 36px}
-.showcase-glass{width:min(790px,68%);padding:30px 38px}
-.showcase-glass h1{font-size:clamp(56px,5.5vw,82px);line-height:1.02;max-width:100%;margin-bottom:24px}
-.showcase-glass h2{font-size:clamp(48px,4.7vw,68px);line-height:1.06;max-width:100%;margin-bottom:24px}
-.showcase-glass .showcase-kicker{margin-bottom:21px}
-.showcase-glass .showcase-description{color:#f3f1e7;margin-bottom:25px}
-.showcase-controls button{background:rgba(255,255,255,.085);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
-body[data-page="index"] .showcase-controls button{background:transparent;-webkit-backdrop-filter:none;backdrop-filter:none}
-body[data-page="index"] .showcase-controls button:hover{background:#ffffff18}
-@media(max-width:1100px){.hero-glass-panel{width:74%;padding:28px 30px}.showcase-glass{width:76%;padding:28px 32px}.showcase-glass h1{font-size:72px}.showcase-glass h2{font-size:58px}}
-@media(max-width:900px){.page-hero .wrap,.page-hero.plain .wrap,.page-hero:not(.plain) .wrap{padding:30px 0;min-height:360px}.hero-glass-panel{width:88%;padding:27px 30px}.hero-glass-panel h1{font-size:47px}.page-hero .hero-glass-panel p{max-width:100%}.showcase-glass{width:90%;padding:28px 32px}.showcase-glass h1{font-size:67px}.showcase-glass h2{font-size:54px}.article-hero .hero-glass-panel{width:100%}}
-@media(max-width:600px){.page-hero .wrap,.page-hero.plain .wrap,.page-hero:not(.plain) .wrap{padding:25px 0;min-height:330px}.hero-glass-panel,.article-hero .hero-glass-panel,.page-hero.plain .hero-glass-panel{width:100%;padding:23px;border-radius:11px}.hero-glass-panel h1,.page-hero.plain .hero-glass-panel h1{font-size:35px;line-height:1.16}.hero-glass-panel .page-breadcrumb{font-size:8px;margin-bottom:18px}.page-hero .hero-glass-panel p{font-size:13px;line-height:1.8}.hero-glass-panel .eyebrow{font-size:8px}.showcase-glass{width:100%;padding:23px;border-radius:12px}.showcase-glass h1{font-size:clamp(40px,12.5vw,56px);line-height:1.04;margin-bottom:21px}.showcase-glass h2{font-size:clamp(34px,9.7vw,48px);line-height:1.1;margin-bottom:21px}.showcase-glass .showcase-kicker{font-size:8px;gap:11px;margin-bottom:19px;letter-spacing:.1em}.showcase-glass .showcase-kicker>span{width:18px}.showcase-glass .showcase-description{font-size:8px;line-height:1.9;margin-bottom:22px}.showcase-glass .showcase-description.showcase-sentence{font-size:15px;line-height:1.7}.showcase-glass .showcase-actions{gap:17px}.showcase-glass .showcase-primary{font-size:8px;padding:14px 16px;gap:17px}.showcase-glass .showcase-secondary{font-size:8px;gap:13px}}
-@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.hero-glass-panel,.showcase-glass{background:rgba(24,46,36,.94)}}
-@media(prefers-reduced-transparency:reduce){.hero-glass-panel,.showcase-glass{background:#20362f;backdrop-filter:none;-webkit-backdrop-filter:none}}
-@media print{.hero-glass-panel,.showcase-glass{width:100%;padding:0;border:0;background:none;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}.hero-glass-panel:before,.showcase-glass:before{display:none}.page-hero .wrap{min-height:0;padding:20px 0}.showcase-glass h1{font-size:30pt}}
+/* Interior mastheads: compact editorial composition and restrained frosted glass. */
+.page-hero{background:#132a24}
+.page-hero .wrap,.page-hero.plain .wrap,.page-hero:not(.plain) .wrap{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;min-height:380px;padding:40px 0}
+.page-hero:not(.plain) .page-hero-img{inset:0 0 0 auto;width:64%;height:100%;margin:0;background:#132a24}
+.page-hero:not(.plain) .page-hero-img img{width:100%;height:100%;object-fit:cover;object-position:78% center}
+.page-hero:not(.plain):after{background:linear-gradient(90deg,#132a24 0%,#132a24 34%,#132a24b8 46%,#132a2433 66%,transparent 83%)}
+.hero-glass-panel{position:relative;box-sizing:border-box;width:min(600px,54%);padding:26px 30px;border:1px solid #ffffff1c;border-radius:10px;background:linear-gradient(120deg,#ffffff08,#ffffff03);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);box-shadow:inset 0 1px 0 #ffffff07}
+.hero-glass-panel:before{display:none}
+.hero-glass-panel .page-breadcrumb{font-size:10px;line-height:1.5;gap:11px;margin-bottom:22px;color:#d1d9cf}
+.hero-glass-panel .eyebrow{font-size:9px;letter-spacing:.17em;margin-bottom:12px;color:#dfc58e}
+.page-hero .hero-glass-panel h1,.page-hero.plain .hero-glass-panel h1{font-size:clamp(40px,4vw,58px);line-height:1.08;letter-spacing:-.035em;max-width:100%;margin:0 0 16px;text-wrap:balance;overflow-wrap:break-word}
+.page-hero .hero-glass-panel p{font-size:15px;line-height:1.75;max-width:100%;margin:0;color:#edf0e9}
+.page-hero .hero-glass-panel>.button{display:inline-flex;align-self:flex-start;margin-top:22px;height:44px}
+.page-hero.plain .hero-glass-panel{width:min(940px,100%)}
+.article-hero .hero-glass-panel h1{font-size:clamp(32px,3.5vw,49px)}
+@media(min-width:1600px){.page-hero:not(.plain) .page-hero-img{width:60%}}
+@media(min-width:601px) and (max-width:1000px){
+ .page-hero .wrap,.page-hero.plain .wrap,.page-hero:not(.plain) .wrap{min-height:360px;padding:32px 0}
+ .hero-glass-panel{width:66%;padding:25px}
+ .page-hero .hero-glass-panel h1{font-size:45px}
+ .page-hero:not(.plain) .page-hero-img{width:66%}
+ .page-hero:not(.plain):after{background:linear-gradient(90deg,#132a24 0%,#132a24ed 30%,#132a2480 58%,#132a241a 100%)}
+}
+@media(max-width:600px){
+ .page-hero .wrap,.page-hero:not(.plain) .wrap{min-height:0;padding:158px 0 28px;display:block}
+ .page-hero:not(.plain) .page-hero-img{inset:0 0 auto;width:100%;height:190px}
+ .page-hero:not(.plain) .page-hero-img img{object-position:82% center}
+ .page-hero:not(.plain):after{background:linear-gradient(0deg,#132a24 0%,#132a24 32%,#132a24bb 48%,#132a2400 76%)}
+ .hero-glass-panel{width:100%;padding:24px;background:linear-gradient(120deg,#1d3a31e8,#19332bdb);border-radius:9px;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+ .hero-glass-panel .page-breadcrumb{font-size:9px;margin-bottom:18px}
+ .hero-glass-panel .eyebrow{font-size:8px;margin-bottom:10px}
+ .page-hero .hero-glass-panel h1,.page-hero.plain .hero-glass-panel h1{font-size:36px;line-height:1.12;margin-bottom:14px}
+ .page-hero .hero-glass-panel p{font-size:14px;line-height:1.7}
+ .page-hero.plain .wrap{min-height:0;padding:28px 0}
+ .article-hero .hero-glass-panel h1{font-size:30px!important;line-height:1.2}
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){.hero-glass-panel{background:#19352ef5}}
+@media(prefers-reduced-transparency:reduce){.hero-glass-panel{background:#19352e;backdrop-filter:none;-webkit-backdrop-filter:none}}
+@media print{
+ .page-hero .wrap,.page-hero.plain .wrap,.page-hero:not(.plain) .wrap{min-height:0;padding:20px 0}
+ .hero-glass-panel,.page-hero.plain .hero-glass-panel{width:100%;padding:0;border:0;background:none;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none}
+ .page-hero .hero-glass-panel h1,.page-hero .hero-glass-panel p{color:#000}
+ .page-hero .hero-glass-panel>.button{display:none}
+}
