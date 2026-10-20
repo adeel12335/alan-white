@@ -1,4 +1,7 @@
 /* Contextual photography with the original author and book images kept intact. */
+.project-heading>div{min-width:0;max-width:850px}
+.project-heading h2{font-size:clamp(32px,3.6vw,50px);line-height:1.15;overflow-wrap:break-word}
+.project-heading>.text-link{flex-shrink:0}
 body[data-page="index"] .portrait img{object-fit:contain;aspect-ratio:300/280;filter:none}
 body[data-page="index"] .taptoe-covers img{object-fit:contain;height:auto;filter:none}
 .cards .publisher-cover{aspect-ratio:2/3;background:#e8e4d8}
@@ -19,6 +22,7 @@ body[data-page="index"] .band{background:var(--navy)}
  .pathways-carousel .pathway-image img{object-position:80% center}
 }
 @media(max-width:600px){
+ .project-heading{flex-direction:column;align-items:flex-start;gap:20px}
  .showcase-content h2{font-size:clamp(38px,10.5vw,56px);max-width:100%;line-height:1.1}
  .showcase-image img{object-position:73% center}
  .showcase-slide:before{background:linear-gradient(90deg,#0a1915dd,#0a19159c 68%,#0a191548),linear-gradient(0deg,#0a1915ba,transparent 50%)}
