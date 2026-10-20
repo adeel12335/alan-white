@@ -28,6 +28,8 @@ Static, responsive website for Alan White: seven main pages plus three complete 
 
 ## Deploy
 
+The homepage's four-book section uses genuine covers. Structure and Being, Being and God, and Being and Nothing were obtained from their official publishers; sources are recorded in `assets/BOOK-COVER-SOURCES.md`. The TAPTOE cover is preserved from the original website. All four use local images in equally sized frames with the whole cover visible.
+
 Run `python tools/build.py`, `python tools/check.py` and `node tools/check-interactions.cjs`. Upload the contents of `dist/` to a static host. The build includes aliases for original routes such as `/blog/` and full article URLs. Configure the host to serve `404.html` for missing pages. No installation is needed. Google Sans loads through Google Fonts; an offline system sans-serif fallback is provided.
 
 Original page and article content snapshots are in `tools/source-content/`. The three articles preserve source HTML, including footnotes and lists. All seven main pages, source resource links and original images have been retained; the original CV is also available locally. `CONTENT-AUDIT.json` records local link checks and source limitations. The old history PDF returns 404; its original link remains alongside the updated 2025 paper. Some Williams College PDF URLs return 403 to automated downloads and remain external. The source corrigenda contain replacement characters, preserved verbatim.
