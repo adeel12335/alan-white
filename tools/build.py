@@ -89,7 +89,6 @@ LAYOUT = """<!doctype html>
       <a class="brand" href="index.html"><strong>Alan White</strong><span>{subtitle}</span></a>
       <nav class="footer-nav" aria-label="Footer">{footer_nav}</nav>
     </div>
-    <p class="footer-credit">Original website by <a href="https://www.onebricktech.com" target="_blank" rel="noopener">One Brick Tech</a></p>
   </div>
 </footer>
 <a class="float-top" href="#top" aria-label="Back to top">{arrow}</a>
