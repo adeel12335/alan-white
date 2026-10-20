@@ -16,13 +16,12 @@ Static, responsive website for Alan White: seven main pages plus three complete 
 
 ## Assets
 
-- Discovery carousel: Swiper 14.3.0, with one fully contained slide at a time, drag/swipe, navigation, numbered pagination and pause/play. GSAP 3.13.0 with ScrollTrigger handles card transitions, scroll reveals and hover motion. Bundles are stored locally in `assets/vendor/` and retain their copyright/license headers. The integration is in `motion.js` and `motion.css`; reduced-motion preferences are respected. Run `node tools/check-motion.cjs` for controller checks. When scripts are unavailable, all three cards remain in a static grid.
+- Discovery carousel: Swiper 14.3.0, with two complete cards on desktop and one on narrower screens, drag/swipe, navigation, numbered pagination and pause/play. GSAP 3.13.0 with ScrollTrigger handles card transitions, scroll reveals and hover motion. Bundles are stored locally in `assets/vendor/` and retain their copyright/license headers. The integration is in `motion.js` and `motion.css`; reduced-motion preferences are respected. Run `node tools/check-motion.cjs` for controller checks. When scripts are unavailable, all three cards remain in a static grid.
 
 - `assets/img/` holds the optimized images the site uses, each as WebP plus a JPG fallback.
-- Heroes are 2000px wide for retina screens, with 900×760 mobile crops.
-- The AI photos share one color grade: matte tone curve, warm split tone, soft vignette and fine grain. Real photos are left ungraded.
-- Photos were AI-generated with Figma AI (gpt-image-2.5-sunburst; originals in `source-images/v2/`). Thumbnails and book-cover backgrounds are crops of those images.
-- `og.jpg` (1200×630) is the social-share image.
+- Active heroes and cards use photographic library, writing, book and podcast scenes. Three refined panoramic scenes are 1881×836; the publications scene is 1536×1024. CSS frames the subject for each viewport.
+- Current imagery was created/edited with the built-in image-generation tool. Exact prompts, edit references and provenance are in `IMAGE-PROMPTS.md`; original PNGs are preserved under `source-images/generated/`.
+- The social-share image uses `library-v2.jpg`.
 - `alan-white.jpg`, `cover-taptoe.jpg`, `cover-taptoe-back.jpg` and `tolkien-letter.jpg` are real images from the source site.
 - `geometry.svg` and `cover-structure.svg` are hand-made vector art.
 - `source-images/` holds the full-size originals. It is not needed for deployment.
@@ -38,3 +37,5 @@ Discovery layout fix: centered coverflow and looping were replaced with a standa
 Inner-page refinement: `inner-pages.css` unifies all interior heroes, the even three-column blog catalogue, grouped CV timelines and book records, and a link-led podcast feature with a responsive platform grid. The unavailable Spotify iframe was removed; its original show URL is retained as an external button. External show/feed availability is controlled by the original providers.
 
 New active imagery: four matching library, writing, publications and podcast scenes were generated with the built-in image-generation tool. Optimized exports are `assets/img/generated-*.webp` and `.jpg`. Complete prompts and provenance are in `IMAGE-PROMPTS.md`. Original PNGs are preserved in `source-images/generated/`; the original author portrait, TAPTOE covers and Tolkien letter remain unchanged.
+
+Imagery refinement (20 October 2026): `library-v2`, `research-v2` and `podcast-v2` replace the earlier scenes with wider, more realistic compositions. Homepage hero slides and discovery cards now use contextual photography; the original Alan White portrait remains in About and the genuine TAPTOE covers remain in the book showcase. Blog corrigenda no longer use a microphone image; listening-platform thumbnails consistently use the recording setup. Exports retain the complete generated composition. Written page content and original resource links are unchanged.

@@ -148,7 +148,7 @@ a.book:hover h3{color:var(--gold)}
 .zoom{cursor:zoom-in}
 
 /* quote band */
-.band{position:relative;padding:130px 0;color:#f4ecdc;text-align:center;background:linear-gradient(rgba(13,28,44,.5),rgba(13,28,44,.72)),url(assets/img/generated-library.jpg) center/cover fixed;background-image:linear-gradient(rgba(13,28,44,.5),rgba(13,28,44,.72)),image-set(url(assets/img/generated-library.webp) type("image/webp"),url(assets/img/generated-library.jpg) type("image/jpeg"))}
+.band{position:relative;padding:130px 0;color:#f4ecdc;text-align:center;background:linear-gradient(rgba(13,28,44,.5),rgba(13,28,44,.72)),url(assets/img/library-v2.jpg) center/cover fixed;background-image:linear-gradient(rgba(13,28,44,.5),rgba(13,28,44,.72)),image-set(url(assets/img/library-v2.webp) type("image/webp"),url(assets/img/library-v2.jpg) type("image/jpeg"))}
 .ornament{width:70px;height:70px;margin:0 auto 26px;background:url(assets/img/geometry.svg) center/contain no-repeat;filter:brightness(1.6)}
 .band blockquote{font:italic 500 clamp(28px,3.6vw,46px)/1.32 var(--display);max-width:920px;margin:0 auto 26px}
 .band cite{font:500 12px var(--body);letter-spacing:.3em;text-transform:uppercase;font-style:normal;color:var(--gold2)}

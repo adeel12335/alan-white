@@ -45,9 +45,9 @@ LAYOUT = """<!doctype html>
 <meta property="og:title" content="{title}">
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="{url}">
-<meta property="og:image" content="{site}/assets/img/generated-library.jpg">
-<meta property="og:image:width" content="1536">
-<meta property="og:image:height" content="1024">
+<meta property="og:image" content="{site}/assets/img/library-v2.jpg">
+<meta property="og:image:width" content="1881">
+<meta property="og:image:height" content="836">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#f8f4ec">
