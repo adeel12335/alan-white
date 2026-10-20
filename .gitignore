@@ -1,0 +1,4 @@
+source-images/
+__pycache__/
+*.tar.gz
+*.zip

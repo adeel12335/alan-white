@@ -1,0 +1,11 @@
+{
+  "pages": 10,
+  "checked_local_references": 391,
+  "errors": [],
+  "source_links_requiring_review": [],
+  "source_notes": [
+    "Original history post PDF returns HTTP 404; retained source link and added the updated 2025 paper.",
+    "Williams College PDF downloads returned HTTP 403 to the automated fetch; their original external URLs are retained.",
+    "Source WordPress corrigenda contain replacement characters; original content is preserved verbatim."
+  ]
+}

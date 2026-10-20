@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://structural-systematic-philosophy-alan-white.thewikistudioltd.chatgpt.site/sitemap.xml
