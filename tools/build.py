@@ -55,8 +55,9 @@ LAYOUT = """<!doctype html>
 <link rel="preload" href="assets/fonts/cormorant.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/eb-garamond.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="premium.css">
 {jsonld}</head>
-<body id="top">
+<body id="top" data-page="{page_name}">
 <div class="reading-progress" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
@@ -184,7 +185,7 @@ def build():
         html = LAYOUT.format(
             title=title, desc=desc, subtitle=SUBTITLE, nav=nav, footer_nav=footer_nav,
             body=body.rstrip(), url=page_url(out), site=SITE_URL, jsonld=jsonld,
-            arrow=ARROW_UP,
+            arrow=ARROW_UP, page_name=Path(out).stem,
             # the 404 page is served from any path, so resolve its links from the site root
             base='<base href="/">\n<meta name="robots" content="noindex">\n' if is404 else "",
         )
@@ -205,7 +206,7 @@ def build():
     print("built sitemap.xml, robots.txt")
     dist = ROOT / 'dist'
     dist.mkdir(exist_ok=True)
-    for name in [*built, '404.html', 'styles.css', 'script.js', 'sitemap.xml', 'robots.txt']:
+    for name in [*built, '404.html', 'styles.css', 'premium.css', 'script.js', 'sitemap.xml', 'robots.txt']:
         shutil.copy2(ROOT / name, dist / name)
     shutil.copytree(ROOT / 'assets', dist / 'assets', dirs_exist_ok=True)
     # Retain original WordPress-style routes when hosted on a static server.

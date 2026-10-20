@@ -6,31 +6,22 @@
     menu.classList.toggle('open', open);
     toggle.setAttribute('aria-expanded', open);
     document.body.style.overflow = open ? 'hidden' : '';
+    document.querySelectorAll('main, .footer, .float-top').forEach(function (el) { el.inert = open; });
   };
   if (toggle && menu) {
     toggle.addEventListener('click', function () { setMenu(!menu.classList.contains('open')); });
-    menu.addEventListener('click', function (e) { if (e.target.tagName === 'A') setMenu(false); });
-    document.addEventListener('keydown', function (e) { if (e.key === 'Escape') setMenu(false); });
+    menu.addEventListener('click', function (e) { if (e.target.closest('a')) setMenu(false); });
+    document.addEventListener('keydown', function (e) { if (e.key === 'Escape' && menu.classList.contains('open')) { setMenu(false); toggle.focus(); } });
+    window.addEventListener('resize', function () { if (window.innerWidth > 900 && menu.classList.contains('open')) setMenu(false); });
   }
 
   // Header state on scroll
   var header = document.querySelector('.site-header');
   var floatTop = document.querySelector('.float-top');
-  var heroImg = document.querySelector('.hero-img img, .page-hero-img img');
-  var still = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var ticking = false;
   var onScroll = function () {
     var y = window.scrollY;
     header && header.classList.toggle('scrolled', y > 20);
     floatTop && floatTop.classList.toggle('show', y > window.innerHeight * 1.2);
-    // Subtle parallax on the hero image (desktop only)
-    if (heroImg && !still && !ticking) {
-      ticking = true;
-      requestAnimationFrame(function () {
-        heroImg.style.transform = window.innerWidth > 900 && y < 1000 ? 'translateY(' + (y * 0.18).toFixed(1) + 'px) scale(1.04)' : '';
-        ticking = false;
-      });
-    }
   };
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
@@ -60,17 +51,42 @@
   var search = document.querySelector('#post-search');
   var count = document.querySelector('#post-count');
   var empty = document.querySelector('.empty');
+  var topicButtons = document.querySelectorAll('[data-topic]');
+  var selectedTopic = 'all';
   if (search && posts.length) {
-    search.addEventListener('input', function () {
+    var filterPosts = function () {
       var q = search.value.trim().toLowerCase();
       var shown = 0;
+      var notesShown = 0;
+      var matchesTopic = function (text) {
+        if (selectedTopic === 'all') return true;
+        if (selectedTopic === 'ssp') return /ssp|philosophy professors|puntel/.test(text);
+        return text.indexOf(selectedTopic) !== -1;
+      };
       posts.forEach(function (p) {
-        p.hidden = !!q && p.textContent.toLowerCase().indexOf(q) === -1;
+        var text = p.querySelector('h2').textContent.toLowerCase();
+        p.hidden = (q && text.indexOf(q) === -1) || !matchesTopic(text);
         if (!p.hidden) shown++;
       });
-      notes.forEach(function (n) { n.hidden = !!q && n.textContent.toLowerCase().indexOf(q) === -1; });
+      notes.forEach(function (n) {
+        var text = n.textContent.toLowerCase();
+        n.hidden = (q && text.indexOf(q) === -1) || !matchesTopic(text);
+        if (!n.hidden) notesShown++;
+      });
       if (count) { count.setAttribute('aria-live', 'polite'); count.textContent = shown; }
-      if (empty) empty.style.display = shown ? 'none' : 'block';
+      if (empty) empty.style.display = shown + notesShown ? 'none' : 'block';
+    };
+    search.addEventListener('input', filterPosts);
+    topicButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        selectedTopic = button.getAttribute('data-topic');
+        topicButtons.forEach(function (b) {
+          var active = b === button;
+          b.classList.toggle('active', active);
+          b.setAttribute('aria-pressed', String(active));
+        });
+        filterPosts();
+      });
     });
   }
 

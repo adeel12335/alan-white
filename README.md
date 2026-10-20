@@ -10,8 +10,8 @@ Static, responsive website for Alan White: seven main pages plus three complete 
 - After editing, run `python tools/build.py` to regenerate the root `*.html` files.
 - Hero images are written as `<!--hero:NAME|alt text|page-hero-img-->`. The build expands this into a `<picture>` with WebP, a JPG fallback, and a mobile crop (`NAME-m`).
 - Any `<img src="assets/img/X.jpg">` is wrapped in a `<picture>` with `X.webp` automatically when that file exists.
-- Styles: `styles.css`. The site is light-only; colors are tokens at the top.
-- Behaviour (menu, blog search, CV scrollspy, lightbox, reveal, parallax): `script.js`.
+- Styles: `styles.css` is the base; `premium.css` contains the current editorial design and responsive layouts. Colors are tokens at the top of `premium.css`.
+- Behaviour (accessible menu, combined blog search and topic filters, CV scrollspy, image preview, reading progress and printing): `script.js`. Hero parallax was removed to keep image crops stable.
 - Fonts (Cormorant Garamond, EB Garamond, latin subset) are self-hosted in `assets/fonts/`.
 
 ## Assets
@@ -27,6 +27,6 @@ Static, responsive website for Alan White: seven main pages plus three complete 
 
 ## Deploy
 
-Run `python tools/build.py` and `python tools/check.py`. Upload the contents of `dist/` to a static host. The build includes aliases for original routes such as `/blog/` and full article URLs. Configure the host to serve `404.html` for missing pages. No installation or external font service is needed.
+Run `python tools/build.py`, `python tools/check.py` and `node tools/check-interactions.cjs`. Upload the contents of `dist/` to a static host. The build includes aliases for original routes such as `/blog/` and full article URLs. Configure the host to serve `404.html` for missing pages. No installation or external font service is needed.
 
 Original page and article content snapshots are in `tools/source-content/`. The three articles preserve source HTML, including footnotes and lists. All seven main pages, source resource links and original images have been retained; the original CV is also available locally. `CONTENT-AUDIT.json` records local link checks and source limitations. The old history PDF returns 404; its original link remains alongside the updated 2025 paper. Some Williams College PDF URLs return 403 to automated downloads and remain external. The source corrigenda contain replacement characters, preserved verbatim.

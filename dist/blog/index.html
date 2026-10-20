@@ -22,8 +22,9 @@
 <link rel="preload" href="assets/fonts/cormorant.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/eb-garamond.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="premium.css">
 </head>
-<body id="top">
+<body id="top" data-page="blog">
 <div class="reading-progress" aria-hidden="true"></div>
 <a class="skip" href="#main">Skip to content</a>
 <header class="site-header">
@@ -47,8 +48,10 @@
 
 <section class="section tight">
   <div class="wrap">
+    <div class="journal-heading"><div><div class="eyebrow">The reading room</div><h2>Posts &amp; papers</h2></div><a class="text-link" href="recent-posts.html">Recent essays <span aria-hidden="true">↗</span></a></div>
+    <div class="topic-filters" role="group" aria-label="Filter posts by topic"><button class="topic-filter active" data-topic="all" aria-pressed="true" type="button">All papers</button><button class="topic-filter" data-topic="being" aria-pressed="false" type="button">Being</button><button class="topic-filter" data-topic="ssp" aria-pressed="false" type="button">SSP</button><button class="topic-filter" data-topic="corrigenda" aria-pressed="false" type="button">Corrigenda</button></div>
     <div class="toolbar">
-      <p class="count"><span id="post-count">12</span> posts &amp; papers</p>
+      <p class="count"><span id="post-count" role="status" aria-live="polite">12</span> posts &amp; papers</p>
       <label class="search"><input id="post-search" type="search" placeholder="Search posts…" aria-label="Search posts"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></label>
     </div>
     <ul class="posts">
@@ -57,7 +60,7 @@
         <div>
           <span class="meta">No. 01 · PDF</span>
           <h2><a href="https://sites.williams.edu/awhite/files/2019/08/Why-has-the-SSP-attracted-so-little-attention.pdf" target="_blank" rel="noopener">Why has the SSP received so little attention?</a></h2>
-          <a class="text-link" href="https://sites.williams.edu/awhite/files/2019/08/Why-has-the-SSP-attracted-so-little-attention.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read <span class="arr">↗</span></a>
+          <a class="text-link" href="https://sites.williams.edu/awhite/files/2019/08/Why-has-the-SSP-attracted-so-little-attention.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read paper <span class="arr">↗</span></a>
         </div>
       </li>
       <li class="post reveal">
@@ -65,7 +68,7 @@
         <div>
           <span class="meta">No. 02 · PDF</span>
           <h2><a href="http://sites.williams.edu/awhite/files/2015/09/For-my-fellow-philosophy-professors.pdf" target="_blank" rel="noopener">For my fellow philosophy professors</a></h2>
-          <a class="text-link" href="http://sites.williams.edu/awhite/files/2015/09/For-my-fellow-philosophy-professors.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read <span class="arr">↗</span></a>
+          <a class="text-link" href="http://sites.williams.edu/awhite/files/2015/09/For-my-fellow-philosophy-professors.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read paper <span class="arr">↗</span></a>
         </div>
       </li>
       <li class="post reveal">
@@ -73,7 +76,7 @@
         <div>
           <span class="meta">No. 03 · PDF</span>
           <h2><a href="https://sites.williams.edu/awhite/files/2025/04/White-2025-Being-for-IEP-Improved.pdf" target="_blank" rel="noopener">Being for <em>Internet Encyclopedia of Philosophy</em> Improved</a></h2>
-          <a class="text-link" href="https://sites.williams.edu/awhite/files/2025/04/White-2025-Being-for-IEP-Improved.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read <span class="arr">↗</span></a>
+          <a class="text-link" href="https://sites.williams.edu/awhite/files/2025/04/White-2025-Being-for-IEP-Improved.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read paper <span class="arr">↗</span></a>
         </div>
       </li>
       <li class="post reveal">
@@ -81,7 +84,7 @@
         <div>
           <span class="meta">No. 04 · PDF</span>
           <h2><a href="https://sites.williams.edu/awhite/files/2025/02/A-Partial-History-of-My-Work-on-the-Structural-Systematic-Philosophy-with-Lorenz-B.-Puntel-With-Particular-Emphasis-on-Being.pdf" target="_blank" rel="noopener">White 2025 A Partial History of My Work on the Structural-Systematic Philosophy With Lorenz B. Puntel, With Particular Emphasis on Being</a></h2>
-          <a class="text-link" href="https://sites.williams.edu/awhite/files/2025/02/A-Partial-History-of-My-Work-on-the-Structural-Systematic-Philosophy-with-Lorenz-B.-Puntel-With-Particular-Emphasis-on-Being.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read <span class="arr">↗</span></a>
+          <a class="text-link" href="https://sites.williams.edu/awhite/files/2025/02/A-Partial-History-of-My-Work-on-the-Structural-Systematic-Philosophy-with-Lorenz-B.-Puntel-With-Particular-Emphasis-on-Being.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read paper <span class="arr">↗</span></a>
         </div>
       </li>
       <li class="post note-row reveal">
@@ -93,7 +96,7 @@
         <div>
           <span class="meta">No. 05 · PDF</span>
           <h2><a href="https://sites.williams.edu/awhite/files/2024/02/White-2024-Rearticulating-Being-Revised.pdf" target="_blank" rel="noopener">White 2024 “Rearticulating Being Revised”</a></h2>
-          <a class="text-link" href="https://sites.williams.edu/awhite/files/2024/02/White-2024-Rearticulating-Being-Revised.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read <span class="arr">↗</span></a>
+          <a class="text-link" href="https://sites.williams.edu/awhite/files/2024/02/White-2024-Rearticulating-Being-Revised.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read paper <span class="arr">↗</span></a>
         </div>
       </li>
       <li class="post reveal">
@@ -101,7 +104,7 @@
         <div>
           <span class="meta">No. 06 · PDF</span>
           <h2><a href="https://sites.williams.edu/awhite/files/2025/03/White-2025-Being-for-IEP-Improved.pdf" target="_blank" rel="noopener">White 2025 Being for IEP Improved</a></h2>
-          <a class="text-link" href="https://sites.williams.edu/awhite/files/2025/03/White-2025-Being-for-IEP-Improved.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read <span class="arr">↗</span></a>
+          <a class="text-link" href="https://sites.williams.edu/awhite/files/2025/03/White-2025-Being-for-IEP-Improved.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read paper <span class="arr">↗</span></a>
         </div>
       </li>
       <li class="post reveal">
@@ -109,7 +112,7 @@
         <div>
           <span class="meta">No. 07 · PDF</span>
           <h2><a href="http://sites.williams.edu/awhite/files/2015/09/Being-for-TAPTOE-2nd-edition.pdf" target="_blank" rel="noopener">Clarifications of <em>TAPTOE</em> on being</a></h2>
-          <a class="text-link" href="http://sites.williams.edu/awhite/files/2015/09/Being-for-TAPTOE-2nd-edition.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read <span class="arr">↗</span></a>
+          <a class="text-link" href="http://sites.williams.edu/awhite/files/2015/09/Being-for-TAPTOE-2nd-edition.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read paper <span class="arr">↗</span></a>
         </div>
       </li>
       <li class="post reveal">
@@ -117,7 +120,7 @@
         <div>
           <span class="meta">No. 08 · PDF</span>
           <h2><a href="https://sites.williams.edu/awhite/files/2024/03/Lorenz-Puntels-first-four-putatively-unassailable-objections-to-my-rearticulation-of-being-and-my-responses-to-those-objections.pdf" target="_blank" rel="noopener">Lorenz B. Puntel’s first four putatively unassailable objections to my rearticulation of being and my responses to those objections</a></h2>
-          <a class="text-link" href="https://sites.williams.edu/awhite/files/2024/03/Lorenz-Puntels-first-four-putatively-unassailable-objections-to-my-rearticulation-of-being-and-my-responses-to-those-objections.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read <span class="arr">↗</span></a>
+          <a class="text-link" href="https://sites.williams.edu/awhite/files/2024/03/Lorenz-Puntels-first-four-putatively-unassailable-objections-to-my-rearticulation-of-being-and-my-responses-to-those-objections.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read paper <span class="arr">↗</span></a>
         </div>
       </li>
       <li class="post reveal">
@@ -125,7 +128,7 @@
         <div>
           <span class="meta">No. 09 · PDF</span>
           <h2><a href="https://sites.williams.edu/awhite/files/2024/05/White-2024-Lorenz-B.-Puntels-Fifth-Putatively-Unassailable-Objection-to-my-Rearticulation-of-Being-With-My-Response.pdf" target="_blank" rel="noopener">Lorenz B. Puntel’s fifth putatively unassailable objection to my rearticulations of being and my response to that objection</a></h2>
-          <a class="text-link" href="https://sites.williams.edu/awhite/files/2024/05/White-2024-Lorenz-B.-Puntels-Fifth-Putatively-Unassailable-Objection-to-my-Rearticulation-of-Being-With-My-Response.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read <span class="arr">↗</span></a>
+          <a class="text-link" href="https://sites.williams.edu/awhite/files/2024/05/White-2024-Lorenz-B.-Puntels-Fifth-Putatively-Unassailable-Objection-to-my-Rearticulation-of-Being-With-My-Response.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read paper <span class="arr">↗</span></a>
         </div>
       </li>
       <li class="post reveal">
@@ -133,7 +136,7 @@
         <div>
           <span class="meta">No. 10 · PDF</span>
           <h2><a href="http://sites.williams.edu/awhite/files/2015/10/TAPTOE-corrigenda5.pdf" target="_blank" rel="noopener"><em>TAPTOE</em> brief corrigenda</a></h2>
-          <a class="text-link" href="http://sites.williams.edu/awhite/files/2015/10/TAPTOE-corrigenda5.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read <span class="arr">↗</span></a>
+          <a class="text-link" href="http://sites.williams.edu/awhite/files/2015/10/TAPTOE-corrigenda5.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read paper <span class="arr">↗</span></a>
         </div>
       </li>
       <li class="post reveal">
@@ -141,7 +144,7 @@
         <div>
           <span class="meta">No. 11 · PDF</span>
           <h2><a href="https://sites.williams.edu/awhite/files/2019/08/A-section-by-section-summary-of-STRUCTURE-AND-BEING-1.pdf" target="_blank" rel="noopener">A section-by-section summary of <em>Structure and Being</em></a></h2>
-          <a class="text-link" href="https://sites.williams.edu/awhite/files/2019/08/A-section-by-section-summary-of-STRUCTURE-AND-BEING-1.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read <span class="arr">↗</span></a>
+          <a class="text-link" href="https://sites.williams.edu/awhite/files/2019/08/A-section-by-section-summary-of-STRUCTURE-AND-BEING-1.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read paper <span class="arr">↗</span></a>
         </div>
       </li>
       <li class="post reveal">
@@ -149,11 +152,11 @@
         <div>
           <span class="meta">No. 12 · PDF</span>
           <h2><a href="http://sites.williams.edu/awhite/files/2015/05/SB-corrigenda.pdf" target="_blank" rel="noopener"><em>Structure and Being</em> corrigenda</a></h2>
-          <a class="text-link" href="http://sites.williams.edu/awhite/files/2015/05/SB-corrigenda.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read <span class="arr">↗</span></a>
+          <a class="text-link" href="http://sites.williams.edu/awhite/files/2015/05/SB-corrigenda.pdf" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">Read paper <span class="arr">↗</span></a>
         </div>
       </li>
     </ul>
-    <p class="empty">No posts match your search.</p>
+    <p class="empty" role="status">No posts match your search.</p>
   </div>
 </section>
 </main>
